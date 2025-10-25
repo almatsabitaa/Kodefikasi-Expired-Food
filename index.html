@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Expired Code Lokal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panduan Expired Code Lokal</h1>
+        </header>
+
+        <form id="calculatorForm">
+            <div class="input-group">
+                <label for="line">Line Produksi:</label>
+                <select id="line" required>
+                    <option value="" disabled selected>Pilih Line</option>
+                    <option value="Line 4">Line 4</option>
+                    <option value="Line 6">Line 6</option>
+                    <option value="Line 7">Line 7</option>
+                    <option value="Line 9">Line 9</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="shift">Shift:</label>
+                <select id="shift" required>
+                    <option value="" disabled selected>Pilih Shift</option>
+                    <option value="1">Shift 1</option>
+                    <option value="2">Shift 2</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="jalur">Jalur Packing:</label>
+                <input type="number" id="jalur" min="1" max="4" required placeholder="Masukkan Jalur (1-4)">
+            </div>
+            
+            <div class="input-group">
+                <label for="group">Group Pekerja:</label>
+                <select id="group" required>
+                    <option value="" disabled selected>Pilih Group</option>
+                    <option value="A">Group A</option>
+                    <option value="B">Group B</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="prod_date">Tanggal Produksi:</label>
+                <input type="date" id="prod_date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="expired_bulan">Masa Kadaluarsa:</label>
+                <select id="expired_bulan" required>
+                    <option value="8">8 bulan</option>
+                    <option value="12">12 bulan</option>
+                </select>
+            </div>
+
+            <button type="submit">Hitung Kode Expired</button>
+        </form>
+
+        <div id="result" class="result">
+            <h3>Hasil Kodefikasi:</h3>
+            <div class="kode-container">
+                <h4> Kode Bag/Cup Mie Instan</h4>
+                <pre id="kode_bag_cup">Hasil akan tampil di sini.</pre>
+            </div>
+            <div class="kode-container">
+                <h4> Kode Karton</h4>
+                <pre id="kode_karton">Hasil akan tampil di sini.</pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
